@@ -36,7 +36,7 @@ const Food = () => {
         {/*Filter Type */}
         <div>
             <p className='font-bold text-gray-700 py-3'>Filter Type</p>
-            <div className='flex w-full flex-wrap gap-4 justify-between max-w-[500px]'>
+            <div className='flex w-full flex-wrap gap-4  max-w-[500px]'>
                 <button onClick={() => setFoods(data)} className='border-orange-600 hover:bg-orange-600 hover:text-white duration-300'>All</button>
                 <button onClick={() => filterType('burger')} className='border-orange-600 hover:bg-orange-600 hover:text-white duration-300'>Burgers</button>
                 <button onClick={() => filterType('pizza')} className='border-orange-600 hover:bg-orange-600 hover:text-white duration-300'>Pizzas</button>
@@ -57,14 +57,14 @@ const Food = () => {
         </div>
      </div>
 
-     <div className='grid grid-cols-2 gap-6 pt-4  lg:grid-cols-4 '>
+     <div className='grid grid-cols-2 gap-2 pt-4  lg:grid-cols-4 '>
         {foods.map( (item , index) => (
 
             <div key={index} className='border shadow-lg rounded-lg hover:scale-105 duration-300 cursor-pointer'>
                 <img src={item.image} alt={item.name} className='w-full h-[200px]  object-cover rounded-t-lg'/>
                 <div className='flex justify-between p-3'>
-                    <p className='font-bold'>{item.name}</p>
-                    <p><span className='bg-orange-500 rounded-full p-1 text-white'>{item.price}</span></p>
+                    <p className='font-bold'>{item.name}</p> 
+                    <p><span className='bg-orange-500 rounded-full p-1 text-white ml-1'>{item.price}</span></p>
                 </div>
             </div>
 
